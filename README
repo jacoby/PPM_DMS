@@ -1,0 +1,16 @@
+
+This is a tool to allow multiple users to add tweets to one twitter
+account using direct messages.
+
+read_twitter_dms.pl checks the direct messages to a given
+twitter account. If those tweets are from a given twitter
+user, it then saves those DMs to a database. This action
+is set at a regular interval, via something like crontab.
+
+write_twitter_dms.pl takes the oldest unread tweet from 
+the database, marks it read, then tweets it. This allows
+you to fill the database at your convenience, then tweet 
+at regular intervals when you want them to. This is also
+done via crontab.
+
+
